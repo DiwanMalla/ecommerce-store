@@ -19,6 +19,7 @@ const login = () => {
     if (isSignUp) {
       setIsSignUp(false);
     }
+    setDependency(!dependency);
   };
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
