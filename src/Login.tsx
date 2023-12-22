@@ -26,7 +26,7 @@ const login = () => {
     if (isSignUp) {
       const login = { email, password };
       setTimeout(() => {
-        fetch("http://localhost:3000/login", {
+        fetch("https://retoolapi.dev/9Ab6Jv/data", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(login),
@@ -35,7 +35,7 @@ const login = () => {
       });
     } else {
       try {
-        const response = await fetch("http://localhost:3000/login");
+        const response = await fetch("https://retoolapi.dev/9Ab6Jv/data");
         if (!response.ok) {
           throw new Error("Could not fetch the data");
         }
@@ -64,7 +64,7 @@ const login = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/login")
+    fetch("https://retoolapi.dev/9Ab6Jv/data")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Could not fetch the data");
