@@ -1,0 +1,29 @@
+{
+  "login": [
+    {
+      "email": "malladipin@gmail.com",
+      "password": "hi",
+      "id": 1
+    },
+    {
+      "email": "malladipin@gmail.com",
+      "password": "hii",
+      "id": 2
+    },
+    {
+      "email": "malladipin@gmail.com",
+      "password": "hi",
+      "id": 3
+    },
+    {
+      "email": "malladipin@gmail.com",
+      "password": "hi",
+      "id": 4
+    },
+    {
+      "email": "malladiwan186@gmail.com",
+      "password": "diwan",
+      "id": 5
+    }
+  ]
+}
