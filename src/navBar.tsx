@@ -14,7 +14,7 @@ const NavBar = () => {
       <div>
         <ul className="flex">
           {navItems.map((item, index) => (
-            <li className="m-2">
+            <li className="m-2" key={index}>
               <Link to={item.path}>{item.name}</Link>
             </li>
           ))}
