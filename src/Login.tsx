@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
-import Home from "./home";
+
+import { useHistory } from "react-router-dom";
+// Define the structure of the login form
 interface loginForm {
   email: string;
   password: string;
 }
 const login = () => {
+  // State variables initialization using useState hooks
   const [loginData, setLoginData] = useState<loginForm>({
     email: "",
     password: "",
@@ -12,8 +15,13 @@ const login = () => {
   const [dependency, setDependency] = useState(false);
   const { email, password } = loginData;
 
+  // Access the history object for programmatic navigation
+  const history = useHistory();
+
+  // State to manage the SignUp/SignIn toggle
   const [isSignUp, setIsSignUp] = useState(false);
 
+  // Function to toggle SignUp state and trigger dependency update
   const signUpButton = () => {
     setIsSignUp(!isSignUp);
     if (isSignUp) {
@@ -21,9 +29,13 @@ const login = () => {
     }
     setDependency(!dependency);
   };
+
+  // Function to handle form submissio
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
+
     if (isSignUp) {
+      // Logic for SignUp functionality
       const login = { email, password };
       setTimeout(() => {
         fetch("https://retoolapi.dev/9Ab6Jv/data", {
@@ -34,6 +46,7 @@ const login = () => {
         setIsSignUp(false);
       });
     } else {
+      // Logic for SignIn functionality
       try {
         const response = await fetch("https://retoolapi.dev/9Ab6Jv/data");
         if (!response.ok) {
@@ -48,9 +61,12 @@ const login = () => {
         });
 
         if (user) {
+          // If user exists, show success alert and redirect to Home
           alert("Success");
-          <Home />;
+
+          history.push("/home");
         } else {
+          // If user does not exist, show invalid alert
           alert("Invalid");
         }
       } catch (error) {
@@ -58,11 +74,14 @@ const login = () => {
       }
     }
   };
+
+  // Function to handle input changes in the form fields
   const handleInputChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
     setLoginData({ ...loginData, [name]: value });
   };
 
+  // Fetch data on component mount or when dependency changes
   useEffect(() => {
     fetch("https://retoolapi.dev/9Ab6Jv/data")
       .then((res) => {
@@ -75,6 +94,8 @@ const login = () => {
         setLoginData(data);
       });
   }, [dependency]);
+
+  // Return JSX for rendering the login form
   return (
     <>
       <div className="flex justify-center mt-[200px] ">

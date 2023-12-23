@@ -1,8 +1,22 @@
 import Login from "./Login";
+import Home from "./home";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 const App = () => {
   return (
     <div>
-      <Login />
+      <Router>
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 };
