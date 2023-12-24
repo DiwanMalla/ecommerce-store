@@ -1,4 +1,4 @@
-import Login from "./Login";
+import Login from "./components/Login";
 import Home from "./home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 const App = () => {

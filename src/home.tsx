@@ -1,9 +1,10 @@
-import NavBar from "./navBar";
+import Header from "./components/Header";
+
 const home = () => {
   return (
     <div>
       <div>
-        <NavBar />
+        <Header />
       </div>
     </div>
   );
