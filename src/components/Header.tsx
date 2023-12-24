@@ -5,7 +5,7 @@ import NavBar from "./navBar";
 const Header = () => {
   return (
     <div className="flex">
-      <div className="w-[180px] h-[100px] border border-solid flex items-center justify-center">
+      <div className="w-[200px] h-[112px] border border-solid flex items-center justify-center">
         <div className="">
           <b>d1mart</b>
         </div>
