@@ -1,5 +1,7 @@
 import Login from "./components/Login";
+import Admin from "./components/admin";
 import Home from "./home";
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 const App = () => {
   return (
@@ -14,6 +16,9 @@ const App = () => {
           </Route>
           <Route path="/home">
             <Home />
+          </Route>
+          <Route path="/admin">
+            <Admin />
           </Route>
         </Switch>
       </Router>

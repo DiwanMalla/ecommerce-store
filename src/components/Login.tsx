@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 // Define the structure of the login form
 interface loginForm {
   email: string;
@@ -98,67 +98,76 @@ const login = () => {
   // Return JSX for rendering the login form
   return (
     <>
-      <div className="flex justify-center mt-[200px] ">
-        <div
-          className="w-[250px] bg-gray-100 text-center p-[50px] "
-          style={{ fontSize: "15px" }}
-        >
-          <h2 className="r">{isSignUp ? "SignUp" : "SignIn"}</h2>
-          <form
-            className=""
-            style={{ display: "flex", flexDirection: "column" }}
-            onSubmit={handleSubmit}
+      <div>
+        <div className="flex justify-center mt-[200px] ">
+          <div
+            className="w-[250px] bg-gray-100 text-center p-[50px] "
+            style={{ fontSize: "15px" }}
           >
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="Enter your email address"
-              className="w-[180px] bg-gray-300 mt-3"
-              value={email}
-              onChange={handleInputChange}
-            ></input>
-            <input
-              type="password"
-              name="password"
-              className="w-[180px] bg-gray-300 mt-3"
-              required
-              placeholder="Enter password"
-              value={password}
-              onChange={handleInputChange}
-            ></input>
+            <h2 className="r">{isSignUp ? "SignUp" : "SignIn"}</h2>
+            <form
+              className=""
+              style={{ display: "flex", flexDirection: "column" }}
+              onSubmit={handleSubmit}
+            >
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Enter your email address"
+                className="w-[180px] bg-gray-300 mt-3"
+                value={email}
+                onChange={handleInputChange}
+              ></input>
+              <input
+                type="password"
+                name="password"
+                className="w-[180px] bg-gray-300 mt-3"
+                required
+                placeholder="Enter password"
+                value={password}
+                onChange={handleInputChange}
+              ></input>
 
-            {!isSignUp && (
-              <a href="" style={{ fontSize: "14px" }}>
-                Forget your password?
-              </a>
-            )}
-            <button className="bg-red-600 mt-2 w-[70px] rounded-lg ml-[50px] p-1">
-              {isSignUp ? "Sign Up" : "Sign In"}
-            </button>
-          </form>
-        </div>
-        <div
-          className="bg-red-600 w-[250px] text-center text-white pt-[70px]"
-          style={{ fontSize: "14px" }}
-        >
-          <h2>
-            <b>Hello, Friend!</b>
-          </h2>
-
-          {!isSignUp ? (
-            <>
-              <h3>Enter your personal details and start journey with us.</h3>
-              <button
-                className="bg-red-600 mt-2 w-[70px] rounded-lg border border-white"
-                onClick={signUpButton}
-              >
-                Sign Up
+              {!isSignUp && (
+                <a href="" style={{ fontSize: "14px" }}>
+                  Forget your password?
+                </a>
+              )}
+              <button className="bg-red-600 mt-2 w-[70px] rounded-lg ml-[50px] p-1">
+                {isSignUp ? "Sign Up" : "Sign In"}
               </button>
-            </>
-          ) : (
-            <h3>Lets begin our journey together.</h3>
-          )}
+            </form>
+          </div>
+          <div
+            className="bg-red-600 w-[250px] text-center text-white pt-[70px]"
+            style={{ fontSize: "14px" }}
+          >
+            <h2>
+              <b>Hello, Friend!</b>
+            </h2>
+
+            {!isSignUp ? (
+              <>
+                <h3>Enter your personal details and start journey with us.</h3>
+                <button
+                  className="bg-red-600 mt-2 w-[70px] rounded-lg border border-white"
+                  onClick={signUpButton}
+                >
+                  Sign Up
+                </button>
+              </>
+            ) : (
+              <h3>Lets begin our journey together.</h3>
+            )}
+          </div>
+        </div>
+        <div className="bg-gradient-to-r from-gray-50 to-red-600 ml-[218px] text-center w-[500px]">
+          <Link to={"/admin"}>
+            <button className="bg-red-600 rounded-lg m-2 w-[120px] text-white border">
+              Admin Login
+            </button>
+          </Link>
         </div>
       </div>
     </>
