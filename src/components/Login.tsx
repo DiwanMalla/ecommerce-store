@@ -99,7 +99,7 @@ const login = () => {
   return (
     <>
       <div>
-        <div className="flex justify-center mt-[200px] ">
+        <div className="flex justify-center mt-[200px] flex-wrap">
           <div
             className="w-[250px] bg-gray-100 text-center p-[50px] "
             style={{ fontSize: "15px" }}
@@ -161,13 +161,13 @@ const login = () => {
               <h3>Lets begin our journey together.</h3>
             )}
           </div>
-        </div>
-        <div className="bg-gradient-to-r from-gray-50 to-red-600 ml-[218px] text-center w-[500px]">
-          <Link to={"/admin"}>
-            <button className="bg-red-600 rounded-lg m-2 w-[120px] text-white border">
-              Admin Login
-            </button>
-          </Link>
+          <div className="bg-gradient-to-r from-gray-50 to-red-600  text-center w-[500px]">
+            <Link to={"/admin"}>
+              <button className="bg-red-600 rounded-lg m-2 w-[120px] text-white border">
+                Admin Login
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </>
