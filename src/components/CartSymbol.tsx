@@ -1,5 +1,5 @@
 import { FaShoppingBasket, FaUser, FaHeart } from "react-icons/fa";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 const CartSymbol = () => {
   const [showAccountDetails, setShowAccountDetails] = useState(false);
@@ -9,8 +9,6 @@ const CartSymbol = () => {
   const handleUserMouseLeave = () => {
     setShowAccountDetails(false);
   };
-  const dropDownRef = useRef(null);
-
   let total = 0;
   return (
     <div>
@@ -24,7 +22,6 @@ const CartSymbol = () => {
             <FaUser />
             {showAccountDetails && (
               <div
-                ref={dropDownRef}
                 className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-md p-4 rounded-lg z-10 w-[165px]"
                 onMouseLeave={handleUserMouseLeave}
               >
