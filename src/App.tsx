@@ -1,6 +1,7 @@
 import Login from "./components/Login";
 import Admin from "./components/admin";
 import Home from "./home";
+import AdminPage from "./components/adminPage";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 const App = () => {
@@ -19,6 +20,9 @@ const App = () => {
           </Route>
           <Route path="/admin">
             <Admin />
+          </Route>
+          <Route path="/admin_home">
+            <AdminPage />
           </Route>
         </Switch>
       </Router>

@@ -22,7 +22,7 @@ const Admin = () => {
     if (username == "Diwan Malla") {
       if (email == "malladipin@gmail.com") {
         if (password == "hello") {
-          history.push("/home");
+          history.push("/admin_home");
         } else {
           alert("Wrong Password");
         }
