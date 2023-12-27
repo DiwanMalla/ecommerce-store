@@ -57,7 +57,7 @@ const adminPage = () => {
                 {login.password}
               </div>
               <button
-                className="bg-orange-400 rounded-lg border-white text-white w-[70px] p-1"
+                className="bg-orange-400 rounded-lg border-white text-white w-[70px] p-1 mr-[30px]"
                 onClick={() => {
                   handleDelete(login.id);
                 }}
