@@ -7,7 +7,7 @@ const promoCard = () => {
         </div>
         <div id="secondColumn">
           <div id="first-row" className="m-3 w-[320px] ">
-            <img src="public/images/leatherBag.jpg" className=""></img>
+            <img src="/images/leatherBag.jpg" className=""></img>
           </div>
           <div id="first-row" className="m-3 w-[320px] bg-gray-400">
             <img
