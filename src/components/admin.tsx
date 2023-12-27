@@ -35,12 +35,12 @@ const Admin = () => {
   };
   return (
     <div
-      className="bg-gradient-to-b from-blue-300 to-purple-200 flex justify-center items-center"
+      className="bg-gradient-to-b from-blue-300 to-purple-200 min-h-screen flex justify-center items-center"
       style={{ minHeight: "100vh", color: "white" }}
     >
-      <div className="bg-white  w-[400px] h-[300px] text-purple-900">
+      <div className="bg-white   w-full sm:w-5/6 md:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-1/3 p-6 text-purple-900">
         <div
-          className="flex justify-center items-center mt-3"
+          className="flex justify-center items-center mt-3 text-2xl"
           style={{ fontSize: "28px" }}
         >
           Admin LogIn
@@ -114,10 +114,10 @@ const Admin = () => {
             </div>
           </div>
         </div>
-        <div className="w-[400px] h-[60px] flex justify-center items-center">
+        <div className="flex justify-center items-center mt-3 ml-4 text-2xl">
           <button
             onClick={handleSubmit}
-            className="bg-purple-800 text-white rounded w-[250px] h-[30px]"
+            className="bg-purple-800 text-white rounded w-full sm:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-1/3 py-2 sm:py-3 px-4 sm:px-6 md:px-8"
           >
             Log In
           </button>
