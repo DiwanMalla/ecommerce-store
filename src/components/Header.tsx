@@ -15,11 +15,13 @@ const Header = () => {
           <div className="ml-3">
             <div className="flex">
               <Search />
-              <Cart />
+              <div className="m-3">
+                <Cart />
+              </div>
             </div>
             <NavBar />
           </div>
-          <hr className="mt-1 w-[930px]" />
+          <hr className="w-[930px]" />
         </div>
       </div>
     </div>

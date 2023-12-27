@@ -3,34 +3,33 @@ import CartSymbol from "./CartSymbol";
 const Cart = () => {
   return (
     <div>
-      <div className="flex">
-        {/* for phone number and free shipping*/}
-        <div className="flex mt-3">
-          <div className="flex   w-[140px] h-[55px] justify-center items-center">
-            <div>
-              <h2 style={{ fontSize: "10px" }}>
-                <b>+977 9855037430</b>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+        {/* Phone number */}
+        <div className="flex flex-col md:flex-row md:items-center">
+          <div className="w-full md:w-auto md:max-w-xs flex justify-center items-center md:border-r md:border-gray-400 md:pr-4">
+            <div className="text-center md:text-left">
+              <h2 className="text-xs md:text-base font-bold">
+                +977 9855037430
               </h2>
-              <h4 className="text-gray-400" style={{ fontSize: "10px" }}>
-                <b>CALL US FREE</b>
+              <h4 className="text-xs md:text-base text-gray-400">
+                CALL US FREE
               </h4>
             </div>
           </div>
-          <div className="h-[50px] border border-1 border-gray-400"></div>
-          <div className="flex justify-center items-center  w-[140px]">
-            <div>
-              <h2 className="text-center" style={{ fontSize: "10px" }}>
-                <b>FREE SHIPPING</b>
-              </h2>
-              <h4 className="text-gray-400" style={{ fontSize: "10px" }}>
-                <b>ON ORDER OVER $150.0</b>
+
+          {/* Free shipping */}
+          <div className="w-full md:w-auto md:max-w-xs mt-2 md:mt-0 md:pl-4 flex justify-center items-center">
+            <div className="text-center md:text-left">
+              <h2 className="text-xs md:text-base font-bold">FREE SHIPPING</h2>
+              <h4 className="text-xs md:text-base text-gray-400">
+                ON ORDERS OVER $150.0
               </h4>
             </div>
           </div>
         </div>
 
-        {/*For cart wishlist symbol*/}
-        <div>
+        {/* Cart/Wishlist symbol */}
+        <div className="mt-3 md:mt-0">
           <CartSymbol />
         </div>
       </div>
