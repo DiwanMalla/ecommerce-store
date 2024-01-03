@@ -1,7 +1,8 @@
 import data from "./faqData";
 import { useState } from "react";
+
 const frequentQuestion = () => {
-  const [selected, setSelected] = useState([]);
+  const [selected, setSelected] = useState<number[]>([]);
   const handleClicked = (selectedId: any) => {
     if (selected.includes(selectedId)) {
       setSelected(selected.filter((item) => item != selectedId));
