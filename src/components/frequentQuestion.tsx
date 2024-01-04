@@ -11,13 +11,22 @@ const frequentQuestion = () => {
     }
   };
   return (
-    <div className="bg-gray-600 min-h-screen flex justify-center items-center py-8">
-      <div id="wrapper" className="w-[400px]">
+    <div className="bg-gray-600 min-h-screen  flex flex-col justify-center items-center py-8">
+      <h1
+        style={{ fontSize: "25px", background: "white" }}
+        className="rounded p-2 mb-3"
+      >
+        Frequent Ask Questions
+      </h1>
+      <div
+        id="wrapper"
+        className=" grid grid-rows-4 grid-cols-1 sm:grid-cols-2 max-w-4xl"
+      >
         {data.map((data) => (
           <div key={data.id} className="p-2">
             <div
               id="question"
-              className=" bg-white rounded p-4 flex justify-between cursor-pointer"
+              className=" bg-white rounded p-4 flex justify-between cursor-pointer w-[400px]"
               onClick={() => {
                 handleClicked(data.id);
               }}
