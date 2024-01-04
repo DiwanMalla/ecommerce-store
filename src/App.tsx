@@ -2,7 +2,7 @@ import Login from "./components/Login";
 import Admin from "./components/admin";
 import Home from "./home";
 import AdminPage from "./components/adminPage";
-
+import Contact from "./contact";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 const App = () => {
   return (
@@ -23,6 +23,9 @@ const App = () => {
           </Route>
           <Route path="/admin_home">
             <AdminPage />
+          </Route>
+          <Route path="/contact">
+            <Contact />
           </Route>
         </Switch>
       </Router>
