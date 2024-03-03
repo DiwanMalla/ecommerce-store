@@ -64,7 +64,7 @@ const login = () => {
           // If user exists, show success alert and redirect to Home
           alert("Success");
 
-          history.push("/home");
+          history.push("/main");
         } else {
           // If user does not exist, show invalid alert
           alert("Invalid");

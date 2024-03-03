@@ -1,9 +1,10 @@
-import Login from "./components/Login";
-import Admin from "./components/admin";
-import Home from "./home";
-import AdminPage from "./components/adminPage";
-import Contact from "./contact";
+import Login from "./components/Authentication/Login/Login";
+import Admin from "./components/Authentication/admin/admin";
+import Home from "./pages/home/home";
+import AdminPage from "./components/Authentication/admin/adminPage";
+import Contact from "./pages/Contact/contact/contact";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import MainPage from "./components/HomePage/MainPage";
 const App = () => {
   return (
     <div>
@@ -14,6 +15,9 @@ const App = () => {
           </Route>
           <Route exact path="/">
             <Login />
+          </Route>
+          <Route path="/main">
+            <MainPage />
           </Route>
           <Route path="/home">
             <Home />

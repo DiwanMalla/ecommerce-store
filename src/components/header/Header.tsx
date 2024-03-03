@@ -1,4 +1,4 @@
-import Cart from "./Cart";
+import Cart from "./Cart/Cart";
 import Search from "./Search";
 import NavBar from "./navBar";
 

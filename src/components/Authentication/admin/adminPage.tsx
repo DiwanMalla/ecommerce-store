@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const adminPage = () => {
+const AdminPage = () => {
   interface loginForm {
     id: number;
     email: string;
@@ -76,4 +76,4 @@ const adminPage = () => {
   );
 };
 
-export default adminPage;
+export default AdminPage;

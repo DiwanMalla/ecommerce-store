@@ -1,5 +1,5 @@
-import Header from "./components/Header";
-import Footer from "./components/footer";
+import Header from "../../../components/header/Header";
+import Footer from "../../../components/footer/footer";
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 const Contact = () => {
@@ -39,7 +39,7 @@ const Contact = () => {
         <p style={{ fontSize: "25px", fontWeight: "bold" }}>Rate Us</p>
         <div className="flex gap-3 m-3 justify-center">
           {[...Array(5)].map((_, index) => (
-            <div className="">
+            <div className="" key={index}>
               <FaStar
                 key={index}
                 className="flex"
