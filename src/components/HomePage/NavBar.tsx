@@ -6,6 +6,9 @@ const navbar = [
     url: "/main",
   },
   { title: "E-Commerce", url: "/home" },
+  { title: "Far-away", url: "https://far-away-project.vercel.app/" },
+  { title: "To-Do", url: "https://todo-react-two-lilac.vercel.app//" },
+  { title: "IOS-Calc", url: "https://ios-calculator-one.vercel.app/" },
 ];
 const NavBar = () => {
   const history = useHistory();
@@ -19,7 +22,15 @@ const NavBar = () => {
         </div>
         <div id="navBar" className="flex gap-6 mt-5 mr-[150px] cursor-pointer">
           {navbar.map((nav) => (
-            <div onClick={() => history.push(nav.url)}>{nav.title}</div>
+            <div
+              onClick={() =>
+                /^https?:\/\//.test(nav.url)
+                  ? window.open(nav.url, "_blanl")
+                  : history.push(nav.url)
+              }
+            >
+              {nav.title}
+            </div>
           ))}
         </div>
       </div>
