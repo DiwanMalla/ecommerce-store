@@ -1,5 +1,6 @@
 import Intro from "./Intro";
 import Name from "./Name";
+
 import SocialMedia from "./SocialMedia";
 import Contact from "./contact";
 import Skills from "./mySkills";
