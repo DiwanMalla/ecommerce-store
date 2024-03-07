@@ -25,7 +25,7 @@ const NavBar = () => {
             <div
               onClick={() =>
                 /^https?:\/\//.test(nav.url)
-                  ? window.open(nav.url, "_blanl")
+                  ? (window.location.href = nav.url)
                   : history.push(nav.url)
               }
             >
